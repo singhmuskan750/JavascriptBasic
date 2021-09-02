@@ -1,8 +1,12 @@
-console.log('Hey this my first piece of JS code!! yay')
-console.log(1546121161)
-console.log({name: "Muskan"})
-console.log(true)
+// Data SVGUnitTypes
+// Primitive or Non Primitive
 
-console.warn("This is a warning")
+let age = 1923.1549862;
+let Name = 'asdf'
 
-console.error("This is an error")
+// Non Primitive data type
+
+let arr = [1, 2, 3, 4, 5]
+arr.push("value")
+console.log(arr)
+console.log(typeof arr)
