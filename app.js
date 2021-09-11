@@ -1,11 +1,8 @@
-const balls =  document.getElementsByClassName('ball')
+const balls =  document.querySelectorAll('.ball')
 const body = document.querySelector('body')
-// console.log('balls')
 
-const arr = [1, 2, 3, 4, 5]
-// arr.push(6)
-// console.log(arr)
 
-for (var i = 0;i<arr.length;i++){
-    console.log(arr[i])
-}
+balls.forEach((ball, iteration) => {
+    const value = iteration * 50
+    ball.style = `transform:translateY(${value}px)`
+})
