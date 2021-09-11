@@ -1,12 +1,35 @@
-// Data SVGUnitTypes
-// Primitive or Non Primitive
+const rock = document.querySelector('#rock')
+const paper = document.querySelector('#paper')
+const scissor = document.querySelector('#scissor')
+const board = document.querySelector('#board')
 
-let age = 1923.1549862;
-let Name = 'asdf'
+const handler = (event) => {
+    const action = event.target.id
+    // if(action==='rock'){
+    //     board.innerHTML=("Rock crushes scissor")
+    // }else if(action==='paper'){
+    //     board.innerHTML=("Paper traps rock")
+    // }else if(action=='scissor'){
+    //     board.innerHTML=("Scissor cuts paper")
+    // }else {
+    //     board.innerHTML=("Click something")
+    // }
 
-// Non Primitive data type
-
-let arr = [1, 2, 3, 4, 5]
-arr.push("value")
-console.log(arr)
-console.log(typeof arr)
+    switch(action){
+        case "rock":
+            board.innerHTML=("Rock crushes scissor")
+            break
+        case "paper":
+            board.innerHTML=("Paper traps rock")
+            break
+        case "scissor":
+            board.innerHTML=("Click something")
+            break
+        default:
+            board.innerHTML=("Click something")
+            break
+    }
+}
+rock.addEventListener('click',handler)
+paper.addEventListener('click', handler)
+scissor.addEventListener('click',  handler)
