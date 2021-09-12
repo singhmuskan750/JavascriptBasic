@@ -1,21 +1,14 @@
-let ranks = [1, 2, 3, 4, 5, 6];
+let concert =  true;
 
-console.log(
-    ranks.map((e, index) => {
-        return e * 100;
-    })
-);
-// map Array
-let newmaparr = ranks.map((e, index) => {
-    if(e%2===0)
-        return e
-})
-console.log(newmaparr);
+let attendConcert = new Promise(function (resolve, reject) {
+    setTimeout(() => {
+        if (concert) {
+            resolve("BOB ATTENDED THE CONCERT"); 
+        }
+        else{
+            reject("BOB DID NOT ATTENDED THE CONCERT");
+        }
+    }, 2000);
+});
 
-// filter Array
-
-let newfilterarr = ranks.filter((e, index) => {
-    if(e%2===0)
-        return e
-})
-console.log(newfilterarr);
+console.log(attendConcert)
