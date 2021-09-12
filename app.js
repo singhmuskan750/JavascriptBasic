@@ -12,3 +12,8 @@ let attendConcert = new Promise(function (resolve, reject) {
 });
 
 console.log(attendConcert)
+attendConcert.then((data)=>console.log(data)).then((error)=>console.log(error))
+
+
+// attendConcert.then((data)=>console.log(data));
+// attendConcert.catch((error)=>console.log(error));
