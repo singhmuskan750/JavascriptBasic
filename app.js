@@ -1,8 +1,13 @@
-const balls =  document.querySelectorAll('.ball')
-const body = document.querySelector('body')
+let ranks = [1, 2, 3, 4];
 
+console.log(
+    ranks.map((e, index) => {
+        return e * 100;
+    })
+);
 
-balls.forEach((ball, iteration) => {
-    const value = iteration * 50
-    ball.style = `transform:translateY(${value}px)`
+let newarr = ranks.map((e, index) => {
+    if(e%2===0)
+        return e
 })
+console.log(newarr);
